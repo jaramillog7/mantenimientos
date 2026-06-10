@@ -1,0 +1,149 @@
+:root {
+  color-scheme: light;
+  --color-fondo: #eef2f8;
+  --color-superficie: #ffffff;
+  --color-borde: #dbe3f0;
+  --color-texto: #10233e;
+  --color-primario: #133a7c;
+  --color-primario-oscuro: #0d2c5f;
+  --color-suave: #f7faff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(180deg, #f1f4fa 0%, var(--color-fondo) 100%);
+  color: var(--color-texto);
+}
+
+.contenedor {
+  max-width: 980px;
+  margin: 36px auto;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 14px;
+  padding: 24px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 42px;
+  line-height: 1.1;
+}
+
+.subtitulo {
+  margin-top: 0;
+  color: #2d466f;
+}
+
+.estado-bd {
+  margin: 18px 0;
+  padding: 12px 14px;
+  background: #f5f8ff;
+  border: 1px solid #d8e3f7;
+  border-radius: 10px;
+}
+
+.bloque-formulario {
+  margin: 16px 0 24px;
+  padding: 14px;
+  border: 1px solid var(--color-borde);
+  border-radius: 10px;
+  background: var(--color-suave);
+}
+
+.fila-formulario {
+  display: flex;
+  gap: 12px;
+  align-items: end;
+  flex-wrap: wrap;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 240px;
+}
+
+.campo label {
+  font-weight: 600;
+}
+
+.campo input {
+  height: 40px;
+  padding: 6px 10px;
+  border: 1px solid #b8c8df;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.boton {
+  height: 40px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--color-primario);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background: var(--color-primario-oscuro);
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.tarjeta {
+  border: 1px solid var(--color-borde);
+  border-radius: 10px;
+  padding: 12px;
+  background: #fff;
+}
+
+.tarjeta h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  color: #35527d;
+}
+
+.tarjeta p {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.bloque-resultado {
+  margin-top: 18px;
+  border-top: 1px solid var(--color-borde);
+  padding-top: 16px;
+}
+
+.nota {
+  color: #3d5174;
+  font-size: 14px;
+}
+
+@media (max-width: 760px) {
+  .contenedor {
+    margin: 12px;
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .tarjetas {
+    grid-template-columns: 1fr;
+  }
+}

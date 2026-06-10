@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /mantenimientos/
+
+  # Si el recurso existe como archivo o carpeta, se sirve normalmente.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Todas las rutas de la aplicacion pasan por el front controller.
+  RewriteRule ^ index.php [L,QSA]
+</IfModule>
